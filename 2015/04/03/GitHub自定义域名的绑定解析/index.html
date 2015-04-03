@@ -107,14 +107,15 @@
       
       <p class="article-byline">
         <a href="/2015/04/03/GitHub自定义域名的绑定解析/" class="article-date">
-  <time datetime="2015-04-03T08:42:01.356Z" itemprop="datePublished">4月 3 2015</time>
+  <time datetime="2015-04-03T08:54:20.648Z" itemprop="datePublished">4月 3 2015</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
         <p>弄这个Github博客花了半天的时间，域名解析上栽了大部分时间完全没有想到。主要是在看到“简书”上的一个教程ping域名的时候ping的是pages.github.com这个网址的IP地址，结果在dnspod上配置后一直无法访问。</p>
 <p>刚开始以为是解析还没有生效，过了2小时后没不行，害的我一直认为是CNAME的问题，反反复复改了半天。最后才想到是IP地址的问题，看来撸多了，智商也是越来越不行了。你要ping的是你的GitHub博客二级域名，比如我的就是shupande.github.io</p>
 <p><img src="http://shupan.qiniudn.com/ping.png" alt="IP地址"></p>
-<p>得到地址后，再进入dnspod进行设置，添加a记录.<br><img src="http://shupan.qiniudn.com/dnspod.png" alt="dnspod配置"></p>
+<p>得到地址后，再进入dnspod进行设置，添加a记录.</p>
+<p><img src="http://shupan.qiniudn.com/dnspod.png" alt="dnspod配置"></p>
 <p>当然还有在GitHub仓库中建立CNAME文件填入你的域名，注意这里不用添加www.然后就大功告成了。我的解析更改后就立即生效了，不得不夸dnspod的效率真的非常高！</p>
 <p><img src="http://shupan.qiniudn.com/CNAME.png" alt="建立CNAME文件"></p>
 
@@ -150,16 +151,12 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/04/03/我的博客又又开张了/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <p class="article-nav-title">
-        
-          (no title)
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
+    <a href="/2015/04/03/我的博客又又开张了/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title"></p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
   
 </nav>
 
@@ -171,6 +168,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/04/03/GitHub自定义域名的绑定解析/" class="thumbnail">
+  
+    <span style="background-image:url(http://shupan.qiniudn.com/ping.png
+)" alt="" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2015/04/03/GitHub自定义域名的绑定解析/" class="title"></a></p>
+              <p class="item-date"><time datetime="2015-04-03T08:54:20.648Z" itemprop="datePublished">4月 3 2015</time></p>
+            </div>
+          </li>
         
           <li>
             <div class="item-thumbnail">
@@ -186,23 +200,6 @@
               <p class="item-category"></p>
               <p class="item-title"><a href="/2015/04/03/我的博客又又开张了/" class="title"></a></p>
               <p class="item-date"><time datetime="2015-04-03T08:47:28.003Z" itemprop="datePublished">4月 3 2015</time></p>
-            </div>
-          </li>
-        
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/04/03/GitHub自定义域名的绑定解析/" class="thumbnail">
-  
-    <span style="background-image:url(http://shupan.qiniudn.com/ping.png
-)" alt="" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/04/03/GitHub自定义域名的绑定解析/" class="title"></a></p>
-              <p class="item-date"><time datetime="2015-04-03T08:42:01.356Z" itemprop="datePublished">4月 3 2015</time></p>
             </div>
           </li>
         
