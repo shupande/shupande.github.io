@@ -5,15 +5,21 @@
   
   <title>shupan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
+  <meta name="description" content="GitHub自定义域名的绑定解析弄这个Github博客花了半天的时间，域名解析上栽了大部分时间完全没有想到。主要是在看到“简书”上的一个教程ping域名的时候ping的是pages.github.com这个网址的IP地址，结果在dnspod上配置后一直无法访问。
+刚开始以为是解析还没有生效，过了2小时后没不行，害的我一直认为是CNAME的问题，反反复复改了半天。最后才想到是IP地址的问题，看来撸多">
+<meta property="og:type" content="article">
 <meta property="og:title" content="shupan's blog">
-<meta property="og:url" content="http://unimz.com/archives/2015/04/index.html">
+<meta property="og:url" content="http://unimz.com/2015/04/03/GitHub_domain_define/index.html">
 <meta property="og:site_name" content="shupan's blog">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="GitHub自定义域名的绑定解析弄这个Github博客花了半天的时间，域名解析上栽了大部分时间完全没有想到。主要是在看到“简书”上的一个教程ping域名的时候ping的是pages.github.com这个网址的IP地址，结果在dnspod上配置后一直无法访问。
+刚开始以为是解析还没有生效，过了2小时后没不行，害的我一直认为是CNAME的问题，反反复复改了半天。最后才想到是IP地址的问题，看来撸多">
+<meta property="og:image" content="http://shupan.qiniudn.com/ping.png">
+<meta property="og:image" content="http://shupan.qiniudn.com/dnspod.png">
+<meta property="og:image" content="http://shupan.qiniudn.com/CNAME.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shupan's blog">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:description" content="GitHub自定义域名的绑定解析弄这个Github博客花了半天的时间，域名解析上栽了大部分时间完全没有想到。主要是在看到“简书”上的一个教程ping域名的时候ping的是pages.github.com这个网址的IP地址，结果在dnspod上配置后一直无法访问。
+刚开始以为是解析还没有生效，过了2小时后没不行，害的我一直认为是CNAME的问题，反反复复改了半天。最后才想到是IP地址的问题，看来撸多">
   
   
     <link rel="icon" href="/favicon.png">
@@ -87,69 +93,37 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-archive"></i>归档: 2015/4</h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/Code-编程/">Code/编程</a></h1>
             </div>
             <div class="main-body-content">
               
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      <a href="/2015/04/03/GitHub_domain_define/" class="thumbnail">
-  
-    <span style="background-image:url(http://shupan.qiniudn.com/ping.png
-)" alt="" class="thumbnail-image"></span>
-  
-
+  <article id="post-GitHub_domain_define" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+      <p class="article-byline">
+        <a href="/2015/04/03/GitHub_domain_define/" class="article-date">
+  <time datetime="2015-04-03T10:02:32.420Z" itemprop="datePublished">4月 3 2015</time>
 </a>
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Code-编程/">Code/编程</a></p>
-        <p class="date"><time datetime="2015-04-03T10:02:32.420Z" itemprop="datePublished">4月 3 2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/04/03/GitHub_domain_define/" class="title"></a>
-      </h2>
-      <p class="article-excerpt">
-        
-        GitHub自定义域名的绑定解析弄这个Github博客花了半天的时间，域名解析上栽了大部分时间完全没有想到。主要是在看到“简书”上的一个教程ping域名的时候ping的是pages.github.com这个网址的IP地址，结果在dnspod上配置后一直无法访问。
-刚开始以为是解析还没有生效，过了2小时后没不行，害的我一直认为是CNAME的问题，反反复复改了半天。最后才想到是IP地址的问题，看来撸多
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <h1 id="GitHub自定义域名的绑定解析">GitHub自定义域名的绑定解析</h1><p>弄这个Github博客花了半天的时间，域名解析上栽了大部分时间完全没有想到。主要是在看到“简书”上的一个教程ping域名的时候ping的是pages.github.com这个网址的IP地址，结果在dnspod上配置后一直无法访问。</p>
+<p>刚开始以为是解析还没有生效，过了2小时后没不行，害的我一直认为是CNAME的问题，反反复复改了半天。最后才想到是IP地址的问题，看来撸多了，智商也是越来越不行了。你要ping的是你的GitHub博客二级域名，比如我的就是shupande.github.io</p>
+<p><img src="http://shupan.qiniudn.com/ping.png" alt="IP地址"></p>
+<p>得到地址后，再进入dnspod进行设置，添加a记录。</p>
+<p><img src="http://shupan.qiniudn.com/dnspod.png" alt="dnspod配置"></p>
+<p>当然还有在GitHub仓库中建立CNAME文件填入你的域名，注意这里不用添加www.然后就大功告成了。我的解析更改后就立即生效了，不得不夸dnspod的效率真的非常高！</p>
+<p><img src="http://shupan.qiniudn.com/CNAME.png" alt="建立CNAME文件"></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://unimz.com/2015/04/03/GitHub_domain_define/" data-id="ci81f8kok0000yc5l5yadgaba" class="article-share-link">分享到</a>
+        
+        
+      </footer>
     </div>
   </article>
-
-    
   
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      <a href="/2015/04/03/Start/" class="thumbnail">
-  
-    <span style="background-image:url(http://shupan.qiniudn.com/mP50401-171748.jpg
-)" alt="" class="thumbnail-image"></span>
-  
-
-</a>
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Other-其他/">Other/其他</a></p>
-        <p class="date"><time datetime="2015-04-03T10:02:10.726Z" itemprop="datePublished">4月 3 2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/04/03/Start/" class="title"></a>
-      </h2>
-      <p class="article-excerpt">
-        
-        我的博客又又开张了!之前搞过几个免费空间来写博客，每次用的时间不长服务器就彻底无法使用。数据也莫名丢失，然后就一直把域名给解析到了我1024上。我这么懒的人又重新捡起来写真是需要“很大的勇气（zhen mei shi gan le）”。这次建在Github上应该会比较稳定，毕竟老外的节操还是高一些。闲来没事的时候我就会来写写的,当然内容主要还是编程、设计、吐槽这些方面。附一张前两天手机拍的照片，就
-      </p>
-    </div>
-  </article>
-
-    
-      </div>
-    
-  
-  
-
 
             </div>
           </section>
@@ -169,6 +143,19 @@
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/04/03/Start/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title"></p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
