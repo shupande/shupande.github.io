@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的博客又又开张了! | shupan&#39;s blog</title>
+  <title>阻止晚睡的罪魁祸首WIFI,给路由器设置定时断网功能。 | shupan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前搞过几个免费空间来写博客，每次用的时间不长服务器就彻底无法使用。数据也莫名丢失，然后就一直把域名给解析到了我1024上。我这么懒的人又重新捡起来写真是需要“很大的勇气（zhen mei shi gan le）”。这次建在Github上应该会比较稳定，毕竟老外的节操还是高一些。闲来没事的时候我就会来写写的,当然内容主要还是编程、设计、吐槽这些方面。附一张前两天手机拍的照片，就酱~">
+  <meta name="description" content="先要说些废话，不知道什么时候开始每天的睡觉时间从11点多变成了12点多，直到现在变成了凌晨1点多或2点多。每天早上起床都是一种折磨，平时上班，上课也没有任何的精神，黑眼圈比熊猫一点都不差，可是就是改不了晚睡的毛病，每天没有任何事干，严重的拖延症都要拖到1-2点才躺下睡觉。白天人都是迷迷糊糊的，完全和世界脱节的样子，这个样子和受女孩子喜爱的阳光暖男完全不沾边啊，（虽然说主要还是看脸）但是这么大多人了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的博客又又开张了!">
-<meta property="og:url" content="http://unimz.com/2015/04/03/Start/index.html">
+<meta property="og:title" content="阻止晚睡的罪魁祸首WIFI,给路由器设置定时断网功能。">
+<meta property="og:url" content="http://unimz.com/2015/04/06/Router_time_setting/index.html">
 <meta property="og:site_name" content="shupan's blog">
-<meta property="og:description" content="之前搞过几个免费空间来写博客，每次用的时间不长服务器就彻底无法使用。数据也莫名丢失，然后就一直把域名给解析到了我1024上。我这么懒的人又重新捡起来写真是需要“很大的勇气（zhen mei shi gan le）”。这次建在Github上应该会比较稳定，毕竟老外的节操还是高一些。闲来没事的时候我就会来写写的,当然内容主要还是编程、设计、吐槽这些方面。附一张前两天手机拍的照片，就酱~">
-<meta property="og:image" content="http://shupan.qiniudn.com/mP50401-171748.jpg">
+<meta property="og:description" content="先要说些废话，不知道什么时候开始每天的睡觉时间从11点多变成了12点多，直到现在变成了凌晨1点多或2点多。每天早上起床都是一种折磨，平时上班，上课也没有任何的精神，黑眼圈比熊猫一点都不差，可是就是改不了晚睡的毛病，每天没有任何事干，严重的拖延症都要拖到1-2点才躺下睡觉。白天人都是迷迷糊糊的，完全和世界脱节的样子，这个样子和受女孩子喜爱的阳光暖男完全不沾边啊，（虽然说主要还是看脸）但是这么大多人了">
+<meta property="og:image" content="http://shupan.qiniudn.com/login.jpg">
+<meta property="og:image" content="http://shupan.qiniudn.com/wan.jpg">
+<meta property="og:image" content="http://shupan.qiniudn.com/setting.jpg">
+<meta property="og:image" content="http://shupan.qiniudn.com/time.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客又又开张了!">
-<meta name="twitter:description" content="之前搞过几个免费空间来写博客，每次用的时间不长服务器就彻底无法使用。数据也莫名丢失，然后就一直把域名给解析到了我1024上。我这么懒的人又重新捡起来写真是需要“很大的勇气（zhen mei shi gan le）”。这次建在Github上应该会比较稳定，毕竟老外的节操还是高一些。闲来没事的时候我就会来写写的,当然内容主要还是编程、设计、吐槽这些方面。附一张前两天手机拍的照片，就酱~">
+<meta name="twitter:title" content="阻止晚睡的罪魁祸首WIFI,给路由器设置定时断网功能。">
+<meta name="twitter:description" content="先要说些废话，不知道什么时候开始每天的睡觉时间从11点多变成了12点多，直到现在变成了凌晨1点多或2点多。每天早上起床都是一种折磨，平时上班，上课也没有任何的精神，黑眼圈比熊猫一点都不差，可是就是改不了晚睡的毛病，每天没有任何事干，严重的拖延症都要拖到1-2点才躺下睡觉。白天人都是迷迷糊糊的，完全和世界脱节的样子，这个样子和受女孩子喜爱的阳光暖男完全不沾边啊，（虽然说主要还是看脸）但是这么大多人了">
   
   
     <link rel="icon" href="/favicon.png">
@@ -86,11 +89,11 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><a class="page-title-link" href="/categories/Other-其他/">Other/其他</a></h1>
+              <h1 class="header">未分类</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="post-Start" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-Router_time_setting" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -98,24 +101,31 @@
           
   
     <h1 class="article-title" itemprop="name">
-      我的博客又又开张了!
+      阻止晚睡的罪魁祸首WIFI,给路由器设置定时断网功能。
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2015/04/03/Start/" class="article-date">
-  <time datetime="2015-04-03T07:31:24.000Z" itemprop="datePublished">4月 3 2015</time>
+        <a href="/2015/04/06/Router_time_setting/" class="article-date">
+  <time datetime="2015-04-06T01:31:09.000Z" itemprop="datePublished">4月 6 2015</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>之前搞过几个免费空间来写博客，每次用的时间不长服务器就彻底无法使用。数据也莫名丢失，然后就一直把域名给解析到了我1024上。我这么懒的人又重新捡起来写真是需要“很大的勇气（zhen mei shi gan le）”。这次建在Github上应该会比较稳定，毕竟老外的节操还是高一些。闲来没事的时候我就会来写写的,当然内容主要还是编程、设计、吐槽这些方面。附一张前两天手机拍的照片，就酱~</p>
-<p><img src="http://shupan.qiniudn.com/mP50401-171748.jpg" alt="深圳欢乐海岸"></p>
+        <p> 先要说些废话，不知道什么时候开始每天的睡觉时间从11点多变成了12点多，直到现在变成了凌晨1点多或2点多。每天早上起床都是一种折磨，平时上班，上课也没有任何的精神，黑眼圈比熊猫一点都不差，可是就是改不了晚睡的毛病，每天没有任何事干，严重的拖延症都要拖到1-2点才躺下睡觉。白天人都是迷迷糊糊的，完全和世界脱节的样子，这个样子和受女孩子喜爱的阳光暖男完全不沾边啊，（虽然说主要还是看脸）但是这么大多人了一事无成，真的要和电脑过一辈子吗？</p>
+<p>作为一个内心还想“变好”的人，每天都想着要改变一下生活节奏. 这几天刷微博看到一条评论才恍然大悟，造成高帅富晚睡的原因可能是逛夜店，喝酒或啪啪啪，我等屌丝只可能是WIFI啊，自从WIFI这个东西在国内普及到手机，平板以来好像真的越睡越晚了！每天睡觉前最后一件事就是看手机或者平板，早上起来也要看一下才肯起床。 </p>
+<p>当时我就感慨，现在的路由器都在防断线，而主动断线也是我们需要的重要功能！本来以为主动断线功能应该是极路由，小米路由这些新生代的智能路由才有的东西。难道为了一个断线功能我要抛弃现在用的好好的传统路由器去买个智能路由吗？作为一个屌丝，当然要挖掘现有路由器的功能。</p>
+<p>以下操作适合老的tp-link 、水星等路由器，因为他们的后台设置界面都是相同的，至于其他品牌的路由器应该也是大同小异的。<br>首先如果你没有改过管理地址那么按照默认的在浏览器里面输入192.168.1.1 ，在弹出的登陆窗口里面输入用户名和密码。如果你没有改过的话，可以输入默认密码，默认密码在路由器的背面有写。</p>
+<p>登陆路由器，不多说了。<br><img src="http://shupan.qiniudn.com/login.jpg" alt="首先登陆"></p>
+<p>左侧菜单栏选择网络参数－wan口设置。<br><img src="http://shupan.qiniudn.com/wan.jpg" alt="然后选择-网络参数"></p>
+<p>在定时连接选项里面设定可以上网的时段，比如我这里设置的是7:00-23:59分可以上网。其他时段自然就上不了网了。设置好之后记得点保存。<br><img src="http://shupan.qiniudn.com/setting.jpg" alt="选择为定时连接"></p>
+<p>还需要检查一下时间的设置是否准确，没有问题就大功告成了！<br><img src="http://shupan.qiniudn.com/time.jpg" alt="检查时间设置"></p>
+<p>当然能否早睡这个始终得看个人克制力，这个小小的设置只能在一定程度上帮助你，既然能改定时断线肯定也改的回去。别到12点上着上着发现路由器给你断线了，你一怒之下给又改回来就没救啦。。。</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://unimz.com/2015/04/03/Start/" data-id="ci82bro6d0000wo5llmmschxo" class="article-share-link">分享到</a>
+        <a data-url="http://unimz.com/2015/04/06/Router_time_setting/" data-id="ci857cubd0000zjxkd5gou7lo" class="article-share-link">分享到</a>
         
         
       </footer>
@@ -124,7 +134,7 @@
   
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Start" data-title="我的博客又又开张了!" data-url="http://unimz.com/2015/04/03/Start/"></div>
+    <div class="ds-thread" data-thread-key="post-Router_time_setting" data-title="阻止晚睡的罪魁祸首WIFI,给路由器设置定时断网功能。" data-url="http://unimz.com/2015/04/06/Router_time_setting/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -164,16 +174,12 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/04/03/GitHub_domain_define/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <p class="article-nav-title">
-        
-          GitHub自定义域名的绑定解析
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
+    <a href="/2015/04/03/GitHub_domain_define/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">GitHub自定义域名的绑定解析</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
   
 </nav>
 
