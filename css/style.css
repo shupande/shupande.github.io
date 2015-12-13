@@ -172,7 +172,7 @@ td {
   font-weight: inherit;
   font-style: inherit;
   font-family: inherit;
-  font-size: 80%;
+  font-size: 100%;
   vertical-align: baseline;
 }
 body {
@@ -228,7 +228,7 @@ body,
 body {
   background: #eaeaea;
   font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 90%;
 }
 .container {
   position: relative;
