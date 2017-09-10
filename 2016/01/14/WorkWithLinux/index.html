@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="shupan's blog">
 <meta property="og:description" content="公司有一台之前挂ERP的服务器一直闲置着，这两天心血来潮（闲的蛋疼）想着自己在公司架个网站然后用dnspod的动态解析试着玩一下（可以避开可恶的备案），其实还想着顺便搞个JAVA环境的服务器方便以后做开发测试。
 服务器之前是windows环境的，想着反正练手就试试Linux吧，网上查了查Linux选定了CentOS，直接就奔了官网下载了最新版的（CentOS 7），用了基础的安装方法弄lamp环境">
-<meta property="og:image" content="http://7q5crt.com1.z0.glb.clouddn.com/begin1.png">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/72fff691gy1fjemifz0h6j21cg0wagp8.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在家搭建一个Linux服务器和拥有顶级域名的网站">
 <meta name="twitter:description" content="公司有一台之前挂ERP的服务器一直闲置着，这两天心血来潮（闲的蛋疼）想着自己在公司架个网站然后用dnspod的动态解析试着玩一下（可以避开可恶的备案），其实还想着顺便搞个JAVA环境的服务器方便以后做开发测试。
@@ -164,17 +164,17 @@
 <p>有人问了，你搞JAVA为什么要装lamp，其实是JAVA开发成本比较高，只是后面练手用。主要要给2个部门搞2个网站最后还是用wordpress省事。</p>
 <p>第一个要吐槽的坑就是任何软件一定要注意慎重选择最新版！会浪费大量的时间在最新版上，最后大部分是由于兼容的问题不支持最新版的系统。没法只得重装低版本的CentOS。但是还有个硬件坑就是centos7以下的系统默认集成的intel e1000系列网卡驱动有BUG，在服务器开机运行不久后会无故自动断网无法恢复或下载时导致系统死机！虽然有解决方案但是挺需要耐心的，因为不知道你在服务器上操作解决BUG的时候什么时候会断网死机。如果你的服务器是intel e1000系列的网卡，那很不幸还是推荐避开这个版本的系统。最终含泪运行起来用的是CentOS 7 配合lnmpa.com的一键安装包+wordpress完成。</p>
 <p>不废话了，进入正题。由于服务器在身边所以选用U盘安装的方式，第一步是下载系统镜像，要注意的是无论去哪里下载一定要下载final完整版的镜像。有很多liveDVD或CD版这个不要选，这个是无需安装的版本只能跑在光盘上的。我们需要的不是这种，完整的大概有4个G大小左右。下载完镜像不要解压，使用UltraISO之类的工具将镜像写入U盘。写入成功之后就可以在服务器上设置优先U盘启动进入安装了。</p>
-<p>下面是我为了截图方便，后面又在虚拟机上重新装的centos 6.7+lnmpa+wdcp的演示，安装的步骤是一样的。提醒一下在虚拟机上跑的就没有必要写入U盘了，直接虚拟机里面设置指向ISO文件就可以了。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/begin1.png" alt="指定ISO文件"><br><img src="http://7q5crt.com1.z0.glb.clouddn.com/begin2.png" alt="指定ISO文件"></p>
-<p>安装过程大约持续30分钟，中间有安装选项（基本安装或是否安装桌面之类）和设置ROOT密码和普通账户建立等等选择，我选择的是带桌面的安装，安装过程全中文操作难度不大就不截图了。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/install.png" alt="安装"><br><img src="http://7q5crt.com1.z0.glb.clouddn.com/install2.png" alt="安装过程"><br>安装完成后<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/OS_finish.png" alt="安装完成"><br>centos桌面<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/centos_desktop.png" alt="桌面"></p>
-<p>接下来直接安装软件，程序里面启动终端。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/terminal.png" alt="终端"></p>
-<p>安装软件需要管理员权限，先切换至管理员账户，输入su 然后回车再输入管理员密码（输入密码的时候是不显示的）再回车就可以了。切换成功如图显示：<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/switch_root_account.png" alt="切换管理员"></p>
-<p>输入 <code>wget http://dll.wdlinux.cn:5180/lanmp_laster.tar.gz</code>回车然后就开始下载软件了，下载过程大概十分钟，根据网速而定。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/download_lanmp.png" alt="下载一键安装包"></p>
-<p>下载完成输入：tar zxvf 文件名 这里就是 <code>tar zxvf lanmp_laster.tar.gz</code> 先解压包裹。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/unzip_lanmp.png" alt="解压包裹"></p>
-<p>解压完成就可以安装了，输入：<code>sh install.sh</code> 开始安装.<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/sh_install.png" alt="安装lanmp"></p>
-<p>安装选项，选择相应的版本就可以了。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/lanmp_choose4.png" alt="版本选择"><br><img src="http://7q5crt.com1.z0.glb.clouddn.com/php_choose.png" alt="版本选择"><br><img src="http://7q5crt.com1.z0.glb.clouddn.com/installing.png" alt="安装中"></p>
-<p>安装完成。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/installed.png" alt="安装完成"></p>
-<p>在浏览器中输入：<code>http://localhost</code> 或当前电脑的IP地址 见到如下界面则说明安装成功。<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/browser_ip.png" alt="检查"></p>
-<p>不知道怎么查看本机IP的，可以在终端中输入: <code>ifconfig -a</code> 注意不是windows系统的ipconfig<br><img src="http://7q5crt.com1.z0.glb.clouddn.com/show_ip.png" alt="查看本机IP地址"></p>
+<p>下面是我为了截图方便，后面又在虚拟机上重新装的centos 6.7+lnmpa+wdcp的演示，安装的步骤是一样的。提醒一下在虚拟机上跑的就没有必要写入U盘了，直接虚拟机里面设置指向ISO文件就可以了。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemifz0h6j21cg0wagp8.jpg" alt="指定ISO文件"><br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemidd02mj21cg0watbb.jpg" alt="指定ISO文件"></p>
+<p>安装过程大约持续30分钟，中间有安装选项（基本安装或是否安装桌面之类）和设置ROOT密码和普通账户建立等等选择，我选择的是带桌面的安装，安装过程全中文操作难度不大就不截图了。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemifwjamj21cg0wags2.jpg" alt="安装"><br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemie6gqoj21cg0wamz4.jpg" alt="安装过程"><br>安装完成后<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemigiwtrj21fe14igp2.jpg" alt="安装完成"><br>centos桌面<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemiff9ezj21fe14igpx.jpg" alt="桌面"></p>
+<p>接下来直接安装软件，程序里面启动终端。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemighe3xj21100pymys.jpg" alt="终端"></p>
+<p>安装软件需要管理员权限，先切换至管理员账户，输入su 然后回车再输入管理员密码（输入密码的时候是不显示的）再回车就可以了。切换成功如图显示：<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemih07hwj210o0pqmyv.jpg" alt="切换管理员"></p>
+<p>输入 <code>wget http://dll.wdlinux.cn:5180/lanmp_laster.tar.gz</code>回车然后就开始下载软件了，下载过程大概十分钟，根据网速而定。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemifcxx1j210m0poq5i.jpg" alt="下载一键安装包"></p>
+<p>下载完成输入：tar zxvf 文件名 这里就是 <code>tar zxvf lanmp_laster.tar.gz</code> 先解压包裹。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemihb2qgj210s0q2gqd.jpg" alt="解压包裹"></p>
+<p>解压完成就可以安装了，输入：<code>sh install.sh</code> 开始安装.<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemihgx0uj210o0pw77s.jpg" alt="安装lanmp"></p>
+<p>安装选项，选择相应的版本就可以了。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemifabmpj210i0pmtbn.jpg" alt="版本选择"><br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemiho1ruj210q0po41y.jpg" alt="版本选择"><br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemifu3z1j210i0pwdku.jpg" alt="安装中"></p>
+<p>安装完成。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemietrhkj210k0pqae0.jpg" alt="安装完成"></p>
+<p>在浏览器中输入：<code>http://localhost</code> 或当前电脑的IP地址 见到如下界面则说明安装成功。<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemiexj1kj21hg0v8115.jpg" alt="检查"></p>
+<p>不知道怎么查看本机IP的，可以在终端中输入: <code>ifconfig -a</code> 注意不是windows系统的ipconfig<br><img src="https://ws1.sinaimg.cn/large/72fff691gy1fjemiiatyzj210i0pkjyx.jpg" alt="查看本机IP地址"></p>
 <p>中间安装wordpress，设置权限等等省略一千字。。。拖延症犯了后面补</p>
 <p>最后设置动态域名解析。首先你当然得有自己的域名，怎么注册域名？去阿里云，dnspod或者godaddy都可以注册，几十块一年。然后将你的域名NS服务器替换为dnspod的，这样才可以使用dnspod的动态解析服务。</p>
 <p>然后将这个php客户端下载到服务器上，然后编辑配置信息，填入你相应的dnspod账号和密码.参考这篇文章：<a href="http://www.williamsang.com/archives/1557.html" target="_blank" rel="external">http://www.williamsang.com/archives/1557.html</a></p>
@@ -374,7 +374,7 @@
                             <a href="/2016/01/14/WorkWithLinux/" class="thumbnail">
     
     
-        <span style="background-image:url(http://7q5crt.com1.z0.glb.clouddn.com/begin1.png)" alt="在家搭建一个Linux服务器和拥有顶级域名的网站" class="thumbnail-image"></span>
+        <span style="background-image:url(https://ws1.sinaimg.cn/large/72fff691gy1fjemifz0h6j21cg0wagp8.jpg)" alt="在家搭建一个Linux服务器和拥有顶级域名的网站" class="thumbnail-image"></span>
     
     
 </a>
